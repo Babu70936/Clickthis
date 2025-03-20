@@ -1,0 +1,134 @@
+/* Hide decorations initially */
+#decorations {
+    display: none;
+}
+
+/* When button is clicked, show decorations and background */
+#decorations:target {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("./b4.jpeg"); /* Ensure the image path is correct */
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+/* Center the text */
+#happy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+}
+
+/* Birthday text styling */
+#birth {
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(14, 12, 14);
+    animation: birth 8s 0s ease alternate infinite;
+}
+
+@keyframes birth {
+    from {
+        font-size: 0px;
+    }
+    to {
+        font-size: 50px;
+    }
+}
+
+/* Heart animations */
+section, aside {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    width: 100vw;
+    position: absolute;
+}
+
+section {
+    top: 20px;
+}
+
+aside {
+    bottom: 0px;
+    gap: 30px;
+}
+
+/* Rotating hearts */
+.hearts {
+    animation: hearts 10s infinite alternate ease;
+}
+
+.hearts_right {
+    animation: hearts_right 10s infinite alternate ease;
+}
+
+@keyframes hearts {
+    0% {
+        transform: rotate(0deg);
+        margin-top: 0px;
+        font-size: 50px;
+    }
+    100% {
+        transform: rotate(360deg);
+        margin-top: 500px;
+        font-size: 50px;
+    }
+}
+
+@keyframes hearts_right {
+    0% {
+        transform: rotate(180deg);
+        margin-bottom: 0px;
+        font-size: 50px;
+    }
+    100% {
+        transform: rotate(-360deg);
+        margin-bottom: 500px;
+        font-size: 50px;
+    }
+}
+
+/* Button styles */
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: rgb(128, 0, 119);
+}
+
+/* Remove focus outline */
+button:focus,
+button:active {
+    outline: none;
+    background-color: green;
+}
+
+/* Initially, no background on body */
+body {
+    height: 100vh;
+    background: none;
+}
